@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="pt-br"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <script async="" src="js/fbevents.js"></script><script src="js/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <link rel="icon" href="images/icon.svg" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icon.svg">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <title>Pesquisa oBoticário</title>
+  <script src="js/latest.js" async="" defer=""></script>
+</head>
+
+<body>
+  <header>
+    <i class="fa-solid fa-bars" style="color: green"></i>
+
+    <img src="images/logo.svg" alt="">
+    <span id="saldo" style="margin-left: auto"></span>
+  </header>
+  <main>
+    <div class="card pergunta01" id="pergunta01">
+      <div class="card__logo">
+        <img src="images/boticario-recicla-1-1024x683.jpg" alt="">
+      </div>
+      <div class="card__satisfacao">
+        <h2>De 0 a 5, como você avaliaria sua familiaridade com o Boticário?</h2>
+        <div class="card__gradeContainer">
+          <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star1"></i>
+          </div>
+          <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star2"></i>
+          </div>
+          <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star3"></i>
+          </div>
+          <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star4"></i>
+          </div>
+          <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star5"></i>
+          </div>
+        </div>
+        <div class="card__gradeDescricao">
+          <p>Muito ruim</p>
+          <p>Muito bom</p>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>
+          Você já usou algum desses produtos ou já conhece algum deles?
+        </h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Egeo</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Floratta</p>
+          </div>
+
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Lily</p>
+          </div>
+
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Boti Baby</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Cuide-se bem</p>
+          </div>
+
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Nenhum</p>
+          </div>
+
+
+        </div>
+      </div>
+
+      <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta01()" disabled="">
+        Enviar avaliação
+      </button>
+    </div>
+    <div class="card pergunta02" id="pergunta02" style="display: none">
+      <div class="card__logo">
+        <img src="images/MODELO_CSBEM_MELISSA.jpg" alt="">
+      </div>
+      <div class="card__satisfacao">
+        <h2>
+          De 0 a 5, como você avaliaria a qualidade dos produtos oBoticário que já experimentou?
+        </h2>
+        <div class="card__gradeContainer">
+          <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star1"></i>
+          </div>
+          <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star2"></i>
+          </div>
+          <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star3"></i>
+          </div>
+          <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star4"></i>
+          </div>
+          <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star5"></i>
+          </div>
+        </div>
+        <div class="card__gradeDescricao">
+          <p>Muito ruim</p>
+          <p>Muito bom</p>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>
+          Você notou alguma melhora na saúde e aparência da sua pele desde que começou a usar os produtos oBoticário?
+        </h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Sim, significativamente</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Não, não percebi melhorias notáveis</p>
+          </div>
+        </div>
+      </div>
+      <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta02()" disabled="">
+        Enviar avaliação
+      </button>
+    </div>
+
+    <div class="card pergunta03" id="pergunta03" style="display: none">
+      <div class="card__logo">
+        <img src="https://pbnews.com.br/images/noticias/35220/5bb1a058aa6b4ac9400c31018a82fbb3.jpg" alt="">
+      </div>
+      <div class="card__satisfacao">
+        <h2>De 0 a 5. Os produtos da oBoticário atenderam suas expectativas em relação aos resultados prometidos?</h2>
+        <div class="card__gradeContainer">
+          <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star1"></i>
+          </div>
+          <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star2"></i>
+          </div>
+          <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star3"></i>
+          </div>
+          <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star4"></i>
+          </div>
+          <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star5"></i>
+          </div>
+        </div>
+        <div class="card__gradeDescricao">
+          <p>Muito ruim</p>
+          <p>Muito bom</p>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>Como você avalia a textura e a sensação dos produtos oBoticário na pele?</h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Desagradável</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Neutro</p>
+          </div>
+
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Agradável</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Suave</p>
+          </div>
+
+        </div>
+      </div>
+      <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta03()" disabled="">
+        Enviar avaliação
+      </button>
+    </div>
+
+    <div class="card pergunta04" id="pergunta04" style="display: none">
+      <div class="card__logo">
+        <img src="images/BrunaHissae_230817_BOTICARIO_EGEO_FREEFIRE_0409.jpg" alt="">
+      </div>
+      <div class="card__satisfacao">
+        <h2>De 0 a 5, Quanto você recomendaria os produtos oBoticário para uma amiga ou colega?</h2>
+        <div class="card__gradeContainer">
+          <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star1"></i>
+          </div>
+          <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star2"></i>
+          </div>
+          <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star3"></i>
+          </div>
+          <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star4"></i>
+          </div>
+          <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star5"></i>
+          </div>
+        </div>
+        <div class="card__gradeDescricao">
+          <p>Muito ruim</p>
+          <p>Muito bom</p>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>O que você espera da oBoticário no futuro?</h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Mais promoções e acessibilidade</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Novas parcerias e linhas temáticas exclusivas</p>
+          </div>
+        </div>
+      </div>
+      <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta04()" disabled="">
+        Enviar avaliação
+      </button>
+    </div>
+
+    <div class="card pergunta05" id="pergunta05" style="display: none">
+      <div class="card__logo">
+        <img src="cacau5.html" alt="">
+      </div>
+      <div class="card__satisfacao">
+        <h2>
+          De 0 a 5, quão entusiasmado(a) você estaria por novos produtos inovadores oBoticário?
+        </h2>
+        <div class="card__gradeContainer">
+          <div class="card__grade" id="card__grade1" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star1"></i>
+          </div>
+          <div class="card__grade" id="card__grade2" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star2"></i>
+          </div>
+          <div class="card__grade" id="card__grade3" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star3"></i>
+          </div>
+          <div class="card__grade" id="card__grade4" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star4"></i>
+          </div>
+          <div class="card__grade" id="card__grade5" onclick="toggleCard(this)">
+            <i class="fa-regular fa-star" id="star5"></i>
+          </div>
+        </div>
+        <div class="card__gradeDescricao">
+          <p>Muito ruim</p>
+          <p>Muito bom</p>
+        </div>
+      </div>
+      <div class="card__resposta">
+        <h2>
+          Se você pudesse criar um novo produto para a oBoticário, ele seria:
+        </h2>
+        <div class="resposta__gradeContainer">
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Uma loção hidratante com cheiros diferenciados</p>
+          </div>
+          <div class="resposta__grade resposta1" onclick="toggleResponse(this, 'resposta1')">
+            <p onclick="scrollToDown()">Um perfume com diferente de todos que já viu</p>
+          </div>
+        </div>
+      </div>
+      <button class="card__enviarResposta" id="enviarResposta" onclick="pergunta05()" disabled="">
+        Enviar avaliação
+      </button>
+    </div>
+    <div class="card finalizacao" id="finalizacao" style="display: none">
+      <div class="finalizacao__titulo">
+        <h1>PARABÉNS!</h1>
+      </div>
+      <div class="finalizacao__trofeu">
+        <img src="images/SEMPRE_COM_VOCE..gif" alt="">
+      </div>
+      <div class="finalizacao__descricao">
+        <p>
+          Parabéns por concluir nossa pesquisa oBoticário! Como agradecimento e recompensa devido o dia do <b>CONSUMIDOR</b>, você ganhou um
+          <b>Kit Exclusivo de Produtos oBoticário</b>! Clique no botão <b>RESGATAR</b> abaixo para
+          resgatar seu prêmio.
+        </p>
+        <p>
+          Esperamos que aproveite os produtos e que eles tragam ainda mais beleza e confiança para o seu dia a dia.<br><br>Com carinho, <br>Equipe oBoticário.
+        </p>
+      </div>
+      <div class="finalizacao__botao">
+        <a href="oboticario.html"><button><i class="fa-solid fa-gift"></i> RESGATAR</button></a>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+          var href = links[i].href.trim() +
+            (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+          links[i].href = href;
+        }
+      }
+    </script>
+  </main>
+
+  <script src="js/hideAllExcept.js"></script>
+  <script src="js/selectedCard3.js"></script>
+  <script src="js/selectedResponse.js"></script>
+  <script src="js/buttonCheck.js"></script>
+  <script src="js/sendResponse.js"></script>
+  <script>
+    $(document).ready(function () {
+      let data = new Date();
+
+      var date = data.getDate();
+      var month = [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro",
+      ][data.getMonth()];
+      var year = data.getFullYear();
+
+      $("#todayDate").html(`${date} de ${month} de ${year}**`);
+    });
+  </script>
+</body></html>
